@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ | 京都高等技術専門校 システム設計科</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">Portfolio</h1>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#about">自己紹介</a>
+        <a href="#certifications">所持資格</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section section-about">
+      <div class="container">
+        <h2 class="section-title">自己紹介</h2>
+        <div class="about-content">
+          <p class="about-school">京都高等技術専門校 システム設計科 在籍（前職：自動車整備士／自動車検査員）</p>
+          <p class="about-text">
+            自動車整備士として約15年間、車検整備・点検・故障診断など、安全性と品質が厳しく求められる現場で業務に従事してきました。原因を仮説立てしてデータ（診断機など）から切り分け、最後まで解決するプロセスは、システム開発におけるデバッグや保守工程にも通じると考えています。
+            現在はシステム設計科で、Javaによるオブジェクト指向、SQLによるデータベース操作、UMLを用いた設計手法を学び、チーム開発を想定した設計・実装・テストにも取り組んでいます。品質意識と改善志向を強みに、安定性と信頼性の高いシステムづくりに貢献できるエンジニアを目指しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section section-certifications">
+      <div class="container">
+        <h2 class="section-title">所持資格 <span class="cert-count-badge">計10件</span></h2>
+        <p class="cert-summary">内訳：IT系 6件／自動車系 2件／その他 2件</p>
+        <div class="cert-display" aria-live="polite" aria-atomic="true">
+          <div class="cert-slide" id="certSlide">
+            <span class="cert-name" id="certName">応用情報技術者</span>
+          </div>
+        </div>
+        <ul class="cert-list" id="certList" hidden>
+          <li class="cert-item"><span class="cert-name">応用情報技術者試験（2025年12月）</span></li>
+          <li class="cert-item"><span class="cert-name">基本情報技術者試験（2025年6月）</span></li>
+          <li class="cert-item"><span class="cert-name">ITパスポート試験（2023年12月）</span></li>
+          <li class="cert-item"><span class="cert-name">Java SE 11 Programmer I（Oracle Certified Java Programmer, Silver）（2025年8月）</span></li>
+          <li class="cert-item"><span class="cert-name">UMTP認定 UMLモデリング技能認定試験 L1（2025年12月）</span></li>
+          <li class="cert-item"><span class="cert-name">品質管理検定（QC検定）3級（2025年7月）</span></li>
+          <li class="cert-item"><span class="cert-name">二級自動車整備士（ガソリン・ディーゼル）（2010年4月）</span></li>
+          <li class="cert-item"><span class="cert-name">自動車検査員（2012年11月）</span></li>
+          <li class="cert-item"><span class="cert-name">色彩検定3級（2023年8月）</span></li>
+          <li class="cert-item"><span class="cert-name">普通自動車第一種運転免許（2008年2月）</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <h2 class="section-title">お問い合わせ</h2>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">名前 <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="お名前を入力してください" aria-describedby="nameError">
+            <span class="form-error" id="nameError" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com" aria-describedby="emailError">
+            <span class="form-error" id="emailError" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">メッセージ <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="メッセージを入力してください" aria-describedby="messageError"></textarea>
+            <span class="form-error" id="messageError" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="submit-btn">送信</button>
+        </form>
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Portfolio - 京都高等技術専門校 システム設計科</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
